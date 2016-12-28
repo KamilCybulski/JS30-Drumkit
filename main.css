@@ -1,0 +1,27 @@
+/*==========================================
+                Colors
+==========================================*/
+/*==========================================
+                Body
+==========================================*/
+body {
+  background-color: #212121; }
+
+/*==========================================
+                Loop panel
+==========================================*/
+.loops {
+  box-sizing: border-box;
+  width: 700px;
+  margin: 100px, auto;
+  height: 120px;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  background-color: #424242; }
+  .loops .l-key {
+    width: 80px;
+    height: 80px;
+    background-color: #616161;
+    box-shadow: 1px 1px 1px 2px black; }

@@ -1,0 +1,38 @@
+/*==========================================
+                Colors
+==========================================*/
+$bcg: #212121;              //body background color
+$panel: #424242;            //panels' color
+$btn: #616161;              //buttons' color
+$loop-accent: #f50057;      //Accent color for loop panel        
+$short-accent: #9c27b0;     //Accent color for short sounds panel
+
+
+/*==========================================
+                Body
+==========================================*/
+body {
+    background-color: $bcg;
+}
+
+/*==========================================
+                Loop panel
+==========================================*/
+.loops {
+    box-sizing: border-box;
+    width: 700px;
+    margin: 100px, auto;
+    height: 120px;
+    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background-color: $panel;
+    .l-key {
+        width: 80px;
+        height: 80px;
+        background-color: $btn;
+        box-shadow: 1px 1px 1px 2px black;
+    }
+}
+

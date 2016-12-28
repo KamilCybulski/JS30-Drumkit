@@ -2,9 +2,9 @@
 JavaScript drumkit
 
 ========= Important notes<br>
--This is a little project that I've done for a JS30 course (https://javascript30.com/).
+-This is a little project that I've done for a JS30 course (https://javascript30.com/).<br>
 -I'm not a musician, the selection of audio files doesn't really make sense to be honest. The point wasn't to create functional tool,
- it was just an excersize.
+ it was just an excersize.<br>
 -I'm also not a designer. I'm pretty sure you can tell. Again, the point was to practice vanilla JS, didnt want to focus too much on other
  stuff. Still, markup and CSS took me about 4 times more, then the actual script. Or something like that.
  

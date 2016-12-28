@@ -1,19 +1,12 @@
 /*==========================================
                 Colors
 ==========================================*/
-$bcg: #212121;              //body background color
-$panel: #424242;            //panels' color
-$btn: #616161;              //buttons' color
-$loop-accent: #f50057;      //Accent color for loop panel        
-$short-accent: #9c27b0;     //Accent color for short sounds panel
+$panel: #263238;            //panels' color
+$btn: #37474f;              //buttons' color
+$loop-accent: #f48fb1;      //Accent color for loop panel        
+$short-accent: #18ffff;     //Accent color for short sounds panel
+$txt: #fff;                 //Text color
 
-
-/*==========================================
-                Body
-==========================================*/
-body {
-    background-color: $bcg;
-}
 
 /*==========================================
                 Loop panel
@@ -21,18 +14,90 @@ body {
 .loops {
     box-sizing: border-box;
     width: 700px;
-    margin: 100px, auto;
+    margin: 50px auto;
     height: 120px;
     padding: 20px;
+    border-radius: 7px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     background-color: $panel;
     .l-key {
+        box-sizing: border-box;
+        width: 80px;
+        height: 80px;
+        border-radius: 7px;
+        background-color: $btn;
+        box-shadow: 1px 1px 1px 2px black;
+        padding: 10px;
+    }
+    .pressed {
+        border: 2px solid $loop-accent;
+        color: $loop-accent;
+        box-shadow: none;
+        filter: brightness(70%);
+        h5 {
+            color: $loop-accent;
+        }   
+        h6 {
+            color: $loop-accent;
+        }
+        }
+}
+
+/*==========================================
+                Shorts panel
+==========================================*/
+.console {
+    box-sizing: border-box;
+    width: 700px;
+    margin: auto;
+    height: 400px;
+    padding: 20px;
+    border-radius: 7px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: $panel;
+    .c-key {
+        box-sizing: border-box;
         width: 80px;
         height: 80px;
         background-color: $btn;
+        margin: 10px;
+        border-radius: 7px;
         box-shadow: 1px 1px 1px 2px black;
+        padding: 10px;
+    }
+    .pressed {
+        border: 2px solid $short-accent;
+        box-shadow: none;
+        filter: brightness(70%); 
+        h5 {
+            color: $short-accent;
+        }   
+        h6 {
+            color: $short-accent;
+        }
     }
 }
 
+/*==========================================
+            Keys' descriptions
+==========================================*/
+h5 {
+    color: $txt;
+    text-align: center;
+    margin: 15px;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+}
+
+h6 {
+    color: $txt;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+}

@@ -2,26 +2,83 @@
                 Colors
 ==========================================*/
 /*==========================================
-                Body
-==========================================*/
-body {
-  background-color: #212121; }
-
-/*==========================================
                 Loop panel
 ==========================================*/
 .loops {
   box-sizing: border-box;
   width: 700px;
-  margin: 100px, auto;
+  margin: 50px auto;
   height: 120px;
   padding: 20px;
+  border-radius: 7px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  background-color: #424242; }
+  background-color: #263238; }
   .loops .l-key {
+    box-sizing: border-box;
     width: 80px;
     height: 80px;
-    background-color: #616161;
-    box-shadow: 1px 1px 1px 2px black; }
+    border-radius: 7px;
+    background-color: #37474f;
+    box-shadow: 1px 1px 1px 2px black;
+    padding: 10px; }
+  .loops .pressed {
+    border: 2px solid #f48fb1;
+    color: #f48fb1;
+    box-shadow: none;
+    filter: brightness(70%); }
+    .loops .pressed h5 {
+      color: #f48fb1; }
+    .loops .pressed h6 {
+      color: #f48fb1; }
+
+/*==========================================
+                Shorts panel
+==========================================*/
+.console {
+  box-sizing: border-box;
+  width: 700px;
+  margin: auto;
+  height: 400px;
+  padding: 20px;
+  border-radius: 7px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: #263238; }
+  .console .c-key {
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    background-color: #37474f;
+    margin: 10px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px 2px black;
+    padding: 10px; }
+  .console .pressed {
+    border: 2px solid #18ffff;
+    box-shadow: none;
+    filter: brightness(70%); }
+    .console .pressed h5 {
+      color: #18ffff; }
+    .console .pressed h6 {
+      color: #18ffff; }
+
+/*==========================================
+            Keys' descriptions
+==========================================*/
+h5 {
+  color: #fff;
+  text-align: center;
+  margin: 15px;
+  font-size: 24px;
+  font-weight: 800;
+  font-family: 'Raleway', sans-serif; }
+
+h6 {
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif; }

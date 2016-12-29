@@ -75,6 +75,9 @@ function clickToggleEnable(){
         } else
             {   
                 sound.play();
+                sound.addEventListener('ended', function(){
+                    this.play();
+                });
             }
         this.classList.toggle('pressed');
     }

@@ -13,6 +13,7 @@ $txt: #fff;                 //Text color
 ==========================================*/
 .loops {
     box-sizing: border-box;
+    background-color: $panel;
     width: 700px;
     margin: 50px auto;
     height: 120px;
@@ -20,8 +21,7 @@ $txt: #fff;                 //Text color
     border-radius: 7px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
-    background-color: $panel;
+    justify-content: space-around;    
     .l-key {
         box-sizing: border-box;
         width: 80px;
@@ -30,6 +30,11 @@ $txt: #fff;                 //Text color
         background-color: $btn;
         box-shadow: 1px 1px 1px 2px black;
         padding: 10px;
+        -webkit-webkit-user-select: none;
+        -moz-webkit-user-select: none;
+        -ms-webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
     }
     .pressed {
         border: 2px solid $loop-accent;
@@ -68,6 +73,11 @@ $txt: #fff;                 //Text color
         border-radius: 7px;
         box-shadow: 1px 1px 1px 2px black;
         padding: 10px;
+        -webkit-webkit-user-select: none;
+        -moz-webkit-user-select: none;
+        -ms-webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
     }
     .pressed {
         border: 2px solid $short-accent;
@@ -100,4 +110,43 @@ h6 {
     font-size: 10px;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
+}
+
+
+/*==========================================
+            Small screens
+==========================================*/
+@media only screen and(max-width: 680px){
+    .loops {
+        width: 360px;
+        height: 100px;
+        padding: 10px;
+        margin: 0 auto;
+        .l-key {
+            width: 50px;
+            height: 50px; 
+            margin: 3px;
+            padding: 5px;
+            h5 {
+                font-size: 20px;
+                margin: 5px;
+            }
+        }
+    }
+    .console {
+        width: 360px;
+        height: 400px;
+        padding: 10px;
+        .to-hide {
+            display: none;
+        }
+        .c-key {
+            width: 70px;
+            height: 70px;
+            margin: 3px;
+            h5{
+                margin-bottom: 6px;
+            }
+        }
+    }
 }

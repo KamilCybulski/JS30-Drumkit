@@ -6,6 +6,7 @@
 ==========================================*/
 .loops {
   box-sizing: border-box;
+  background-color: #263238;
   width: 700px;
   margin: 50px auto;
   height: 120px;
@@ -13,8 +14,7 @@
   border-radius: 7px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
-  background-color: #263238; }
+  justify-content: space-around; }
   .loops .l-key {
     box-sizing: border-box;
     width: 80px;
@@ -22,7 +22,12 @@
     border-radius: 7px;
     background-color: #37474f;
     box-shadow: 1px 1px 1px 2px black;
-    padding: 10px; }
+    padding: 10px;
+    -webkit-webkit-user-select: none;
+    -moz-webkit-user-select: none;
+    -ms-webkit-user-select: none;
+    user-select: none;
+    cursor: pointer; }
   .loops .pressed {
     border: 2px solid #f48fb1;
     color: #f48fb1;
@@ -55,7 +60,12 @@
     margin: 10px;
     border-radius: 7px;
     box-shadow: 1px 1px 1px 2px black;
-    padding: 10px; }
+    padding: 10px;
+    -webkit-webkit-user-select: none;
+    -moz-webkit-user-select: none;
+    -ms-webkit-user-select: none;
+    user-select: none;
+    cursor: pointer; }
   .console .pressed {
     border: 2px solid #18ffff;
     box-shadow: none;
@@ -82,3 +92,33 @@ h6 {
   font-size: 10px;
   font-weight: 400;
   font-family: 'Raleway', sans-serif; }
+
+/*==========================================
+            Small screens
+==========================================*/
+@media only screen and (max-width: 680px) {
+  .loops {
+    width: 360px;
+    height: 100px;
+    padding: 10px;
+    margin: 0 auto; }
+    .loops .l-key {
+      width: 50px;
+      height: 50px;
+      margin: 3px;
+      padding: 5px; }
+      .loops .l-key h5 {
+        font-size: 20px;
+        margin: 5px; }
+  .console {
+    width: 360px;
+    height: 400px;
+    padding: 10px; }
+    .console .to-hide {
+      display: none; }
+    .console .c-key {
+      width: 70px;
+      height: 70px;
+      margin: 3px; }
+      .console .c-key h5 {
+        margin-bottom: 6px; } }

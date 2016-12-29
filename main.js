@@ -37,5 +37,57 @@ function unpress(e){
     }
 }
 
+//This function enables click functionality for short sound buttons
+function clickPlayEnable(){
+    //Function for playing short audio file
+    function playShortSound(){
+        this.classList.add('pressed');
+        const sound = document.querySelector('audio.' + this.classList[1]);    //Bind audio file to the proper div  
+        sound.currentTime = 0;
+        sound.play();
+    }
+
+    //Function to unpress the button after the mouse key is released
+    function releaseBtn(){
+        this.classList.remove('pressed');
+    }
+
+
+    const cBtns = document.querySelectorAll(".c-key");            //Select all the buttons fot the short sounds
+
+    cBtns.forEach(function(key){                                                  
+        key.addEventListener('mousedown', playShortSound);                  //Play sound on mouse down
+        key.addEventListener('mouseup', releaseBtn);                        //remove class 'pressed' on mouse up
+        key.addEventListener('mouseout', releaseBtn);                       //remove class 'pressed' on mouseout
+    });
+}
+
+
+//This function enables toggling loop buttons by mouse click
+function clickToggleEnable(){
+
+    //Function that toggles playing audio file on and off, and also adds/removes 'pressed' class
+    function toggleLoop(){
+        const sound = document.querySelector('audio.' + this.classList[1]);
+        if (this.classList.contains('pressed')){
+            sound.currentTime = 0;
+            sound.pause();
+        } else
+            {   
+                sound.play();
+            }
+        this.classList.toggle('pressed');
+    }
+
+    const lBtns = document.querySelectorAll('.l-key');
+    lBtns.forEach(function(key){
+        key.addEventListener('click', toggleLoop);
+    });
+}
+
+
 window.addEventListener('keydown', playSound);
 window.addEventListener('keyup', unpress);
+window.addEventListener('load', clickPlayEnable);
+window.addEventListener('load', clickToggleEnable);
+

@@ -10,10 +10,10 @@ JavaScript drumkit
  
  
 ========== Instructions<br>
- The idea is pretty simple. On the upper panel you have 6 buttons, described as 'loops'. Pressing any of them will play a longer audio
+ The idea is pretty simple. On the upper panel you have 6 buttons, described as 'loops'. Pressing any of the related key (on keyboard!) will play a longer audio
  file, that will keep replaying itself, unitll you press a key again. This is supposed to toggle on and off some sort of "background music"
  
- On the lower panel, you have buttons for the short sounds. Pressing a button will just play a sound once. 
+ On the lower panel, you have buttons for the short sounds. Pressing a related key will just play a sound once. 
  
  So far this supports only keyboard. I'll make a tablet-friendly version soon. 
  This kind of stuff isn't really supposed to be used on mobiles (too many buttons to fit them on small screen - and you want the entire
